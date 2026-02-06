@@ -62,7 +62,7 @@ today_str = str(date.today())
 st.header(f"Dnešní úkoly ({today_str})")
 
 if not habits_config:
-    st.warning("Nemáš nastavené žádné habity. Přidej je v levém panelu!")
+    st.warning("Lazy ass nigga")
 
 for habit_name, tup in habits_config.items():
     _, habit_for = tup
@@ -83,7 +83,7 @@ for habit_name, tup in habits_config.items():
             with col2:
                 comment = st.text_input(f"Okomentuj", key=f"text_{habit_name}")
 
-            if st.button(f"Odeslat {habit_name}", key=f"btn_{habit_name}"):
+            if st.button(f"Ship {habit_name}", key=f"btn_{habit_name}"):
                 if comment:
                     photo_path = None
                     if uploaded_photo is not None:
@@ -106,7 +106,7 @@ for habit_name, tup in habits_config.items():
                     st.success("Odesláno!")
                     st.rerun()
                 else:
-                    st.error("Musíte zadat komentář!")
+                    st.error("Musíš zadat komentář!")
 
 st.divider()
 st.header(f"Tresty pro {current_user}a")
