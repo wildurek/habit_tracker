@@ -180,7 +180,7 @@ def main_app():
 
     if sel_g_id:
         cur_g = groups[sel_g_id]
-        st.sidebar.markdown(f"### 🏠 {cur_g['name']}")
+        st.sidebar.markdown(f"### 🏠 {cur_g['name']} ({sel_g_id})")
 
         with st.sidebar.expander("👥 Členové"):
             for m in cur_g.get("members", []): st.text(f"• {m}")
